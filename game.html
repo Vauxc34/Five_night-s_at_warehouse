@@ -37,6 +37,17 @@
         background-color: #00000044;
     }
 
+    #blured_screen {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        opacity: 0;
+        z-index: -1;
+    }
+
     #scroll-right {
         position: fixed;
         top: 0%;
@@ -55,7 +66,7 @@
         left: 0%;
     }
 
-    .btn_container {
+    #btn_container {
         position: fixed;
         bottom: 0px;
         height: 20vh;
@@ -63,6 +74,7 @@
         border-top-left-radius:50px;
         border-top-right-radius:50px;
         background-color: #e07f0080;
+        z-index: 1;
     }
 
     h1 {
@@ -80,6 +92,16 @@
         color: white;
     }
 
+    #winner {
+        position: absolute;
+        top: 30%;
+        text-transform: uppercase;
+        font-size: 350px;
+        color: white;
+        opacity: 0;
+        transition: 5s;
+    }
+
     #check {
         align-self: flex-end;
         height: 10%;
@@ -87,7 +109,8 @@
         border-radius: 50px;
         border: none;
         margin: 40px;
-        z-index: 1;
+        z-index: 2;
+        
     }
 
     #door {
@@ -97,7 +120,8 @@
         border-radius: 50px;
         border: none;
         margin: 40px;
-        z-index: 1;
+        z-index: 2;
+        
     }
 
 
@@ -106,10 +130,13 @@
 <body>
     <div class="room">
         <div class="container">
+        <div id="blured_screen">
+            <span id="winner">Winner</span>
+        </div>
         <h1>Night 1</h1>
         <h2>00:00</h2>
         <button id="door">door light</button><button id="check">check</button>
-        <div class="btn_container">
+        <div id="btn_container">
             <div id="scroll-right"></div>
             <div id="scroll-left"></div>
         </div>
@@ -138,10 +165,18 @@
 
         /* */
 
-        /* Hours and day */
+        /* Hours/day and winner background with span */
 
         const day = document.querySelector("h1")
         const hours = document.querySelector("h2")
+
+        const container_buttons = document.getElementById("btn_container")
+        const button1 = document.getElementById("door")
+        const button2 = document.getElementById("check")
+
+        const win_text = document.getElementById("winner")
+
+        const blur_screen = document.getElementById("blured_screen")
         
         let actual_hour = 23
         let actual_minutes = 10
@@ -176,11 +211,25 @@
                 actual_hour = 6
             }if(actual_hour == 6) {
                 day.textContent = "Day 1"
+            }if(day.textContent == "Day 1") {
+
+                win_text.style.opacity = 1
+
+                blur_screen.style.opacity = 1
+                blur_screen.style.zIndex = 1
+
+
+                container_buttons.style.zIndex = -1
+                button1.style.opacity = -1
+                button2.style.opacity = -1
+
+                day.style.opacity = 0
+                hours.style.opacity = 0
             }
         }
         
 
-        setInterval(passing_time, 2500)
+        setInterval(passing_time, 1750)
         // setInterval(passing_day, 1000)
 
 
