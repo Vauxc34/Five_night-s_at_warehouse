@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night 1</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+    .room {
+        position: relative;
+        height: 100vh;
+        width: 120%;
+        background-image: url(/textures/room.png);
+        background-size: 100% 100%;
+    }
+
+    .container {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #00000044;
+    }
+
+    #scroll-right {
+        position: fixed;
+        top: 0%;
+        height: 100%;
+        width: 100px;
+        background-color: #00000075;
+        left: 95%;
+    }
+
+    #scroll-left {
+        position: fixed;
+        top: 0%;
+        height: 100%;
+        width: 100px;
+        background-color: #00000075;
+        left: 0%;
+    }
+
+    .btn_container {
+        position: fixed;
+        bottom: 0px;
+        height: 20vh;
+        width: 100vh;
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        background-color: #e07f0080;
+    }
+
+    h1 {
+        position: fixed;
+        top: 0px;
+        left: 120px;
+        font-size: 90px;
+        color: white;
+    }
+
+    h2 {
+        position: fixed;
+        right: 120px;
+        font-size: 90px;
+        color: white;
+    }
+
+    #check {
+        align-self: flex-end;
+        height: 10%;
+        width: 20%;
+        border-radius: 50px;
+        border: none;
+        margin: 40px;
+        z-index: 1;
+    }
+
+    #door {
+        align-self: flex-end;
+        height: 10%;
+        width: 20%;
+        border-radius: 50px;
+        border: none;
+        margin: 40px;
+        z-index: 1;
+    }
+
+
+
+</style>
+<body>
+    <div class="room">
+        <div class="container">
+        <h1>Night 1</h1>
+        <h2>00:00</h2>
+        <button id="door">door light</button><button id="check">check</button>
+        <div class="btn_container">
+            <div id="scroll-right"></div>
+            <div id="scroll-left"></div>
+        </div>
+        </div>
+    </div>
+    <script>
+
+        /* Scrolling effect */
+
+        const scroll_btn_right = document.getElementById("scroll-right")
+        const scroll_btn_left = document.getElementById("scroll-left")
+
+        let value_scroll = 0;
+
+        const scrollingright = () => {
+            window.scroll(value_scroll++, 0)
+        }
+
+        const scrollingleft = () => {
+            window.scroll(value_scroll--, 0)
+            
+        }
+
+        scroll_btn_right.addEventListener("mousemove", scrollingright)
+        scroll_btn_left.addEventListener("mousemove", scrollingleft)
+
+        /* */
+
+        /* Hours and day */
+
+        const day = document.querySelector("h1")
+        const hours = document.querySelector("h2")
+        
+        let actual_hour = 23
+        let actual_minutes = 10
+
+        hours.textContent = actual_hour + ":" + actual_minutes
+
+        const passing_time = () => {
+            hours.textContent = actual_hour + ":" + actual_minutes++
+            if(hours.textContent == 23 + ":" + 60) {
+                actual_hour = 0 + "" + 0
+                hours.textContent = 00 + ":" + actual_minutes
+            }if(actual_minutes == 60) {
+                actual_minutes = 0
+                actual_hour = 1
+            }if(actual_minutes == 59 && actual_hour == 1) {
+                actual_minutes = 0
+                actual_hour = 2
+                hours.textContent = actual_hour + ":" + actual_minutes
+            }if(actual_minutes == 58 && actual_hour == 2) {
+                actual_minutes = 0
+                actual_hour = 3
+                hours.textContent = actual_hour + ":" + actual_minutes
+            }if(actual_minutes == 57 && actual_hour == 3) {
+                actual_minutes = 0
+                actual_hour = 4
+                hours.textContent = actual_hour + ":" + actual_minutes
+            }if(actual_minutes == 56 && actual_hour == 4) {
+                actual_minutes = 0
+                actual_hour = 5
+                hours.textContent = actual_hour + ":" + actual_minutes
+            }if(actual_minutes == 55 && actual_hour == 5) {
+                actual_hour = 6
+            }if(actual_hour == 6) {
+                day.textContent = "Day 1"
+            }
+        }
+        
+
+        setInterval(passing_time, 2500)
+        // setInterval(passing_day, 1000)
+
+
+
+        /* */
+
+
+
+    </script>
+</body>
+</html>
