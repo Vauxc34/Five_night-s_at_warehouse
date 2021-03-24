@@ -2,7 +2,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -21,14 +21,13 @@
   position: absolute;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: #a40c0c;
-  z-index: -1;
+  height: 95%;
+  width: 95%;
+  background-color: #a40c0c47;
 }
 
 #tablet #screen #instruction {
-  margin: 85px;
+  margin: 25px;
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -43,68 +42,72 @@
   background-size: 100%;
 }
 
-#tablet #screen #minimap #cam1 {
+#tablet #screen #minimap #cam1_tile {
   position: absolute;
   bottom: 32.5%;
   right: 66.5%;
   height: 135px;
   width: 45px;
   background-color: #9b19199c;
+  z-index: 10;
 }
 
-#tablet #screen #minimap #cam2 {
+#tablet #screen #minimap #cam2_tile {
   position: absolute;
   bottom: 73.35%;
   right: 55%;
   height: 50px;
   width: 115px;
   background-color: #9b19199c;
+  z-index: 10;
 }
 
-#tablet #screen #minimap #cam3 {
+#tablet #screen #minimap #cam3_tile {
   position: absolute;
   bottom: 27.75%;
   right: 3.75%;
   height: 97.5px;
   width: 100px;
   background-color: #9b19199c;
+  z-index: 10;
 }
 
-#tablet #screen #minimap #cam4 {
+#tablet #screen #minimap #cam4_tile {
   position: absolute;
   bottom: 57.85%;
   right: 3.65%;
   height: 100px;
   width: 100px;
   background-color: #9b19199c;
+  cursor: pointer;
 }
 
 #tablet #screen #counter1 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 30px;
-  margin: 30px;
+  margin: 80px;
 }
 
 #tablet #screen #counter2 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 30px;
-  margin: 30px;
+  margin: 80px;
 }
 
 #tablet #screen #counter3 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 30px;
-  margin: 30px;
+  margin: 80px;
 }
 
 #tablet #screen #counter4 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 30px;
-  margin: 30px;
+  margin: 80px;
 }
 
 #tablet #cam_screen1 {
