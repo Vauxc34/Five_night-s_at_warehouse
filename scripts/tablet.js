@@ -50,7 +50,7 @@ btn_check.addEventListener("click", () => {
     const hiding_menu = () => {
 
         if(event.keyCode === 27) {
-            tablet.style.top = "-1000px"
+            tablet.style.top = "-10000px"
             btn_check.style.zIndex = "2"
             btn_doors.style.zIndex = "2"
             btn_check.style.opacity = "1"
@@ -129,6 +129,9 @@ const change_room1 = () => {
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam1.png)"
 
+    cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+    cam_screen1_.style.backgroundSize = "100% 100%"
+
 }
 
 const change_room2 = () => {
@@ -140,6 +143,9 @@ const change_room2 = () => {
     cam_screen4_.style.opacity = 0
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam2.png)"
+
+    cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+    cam_screen2_.style.backgroundSize = "100% 100%"
 
 }
 
