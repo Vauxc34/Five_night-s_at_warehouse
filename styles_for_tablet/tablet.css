@@ -23,12 +23,12 @@
       align-self: center;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #a40c0c;
   z-index: -1;
 }
 
 #tablet #screen #instruction {
-  margin: 100px;
+  margin: 85px;
   font-size: 20px;
   text-transform: uppercase;
 }
