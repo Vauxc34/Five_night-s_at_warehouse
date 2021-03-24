@@ -118,10 +118,12 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  left: 0px;
-  height: 10%;
-  width: 10%;
+  bottom: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
   background-color: red;
+  opacity: 1;
 }
 
 #cam_screen2 {
@@ -129,9 +131,11 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  top: 50px;
   height: 10%;
   width: 10%;
   background-color: yellow;
+  opacity: 0;
 }
 
 #cam_screen3 {
@@ -142,6 +146,7 @@
   height: 10%;
   width: 10%;
   background-color: green;
+  opacity: 0;
 }
 
 #cam_screen4 {
@@ -149,8 +154,10 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 10%;
-  width: 10%;
-  background-color: brown;
+  height: 80%;
+  width: 50%;
+  margin: 40px;
+  background-color: #069a727d;
+  opacity: 0;
 }
 /*# sourceMappingURL=tablet.css.map */
