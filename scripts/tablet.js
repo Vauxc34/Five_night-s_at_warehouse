@@ -14,16 +14,17 @@ btn_check.addEventListener("click", () => {
 
     /* */
 
+    const hiding_menu = () => {
+
+        if(event.keyCode === 27) {
+            tablet.style.top = "-1000px"
+            btn_check.style.zIndex = "2"
+            btn_doors.style.zIndex = "2"
+        }
+    
+    }
+    
+    window.addEventListener("keydown", hiding_menu)
+
 })
 
-const hiding_menu = () => {
-
-    if(event.keyCode === 27) {
-        tablet.style.top = "-1000px"
-        btn_check.style.zIndex = "2"
-        btn_doors.style.zIndex = "2"
-    }
-
-}
-
-window.addEventListener("keydown", hiding_menu)
