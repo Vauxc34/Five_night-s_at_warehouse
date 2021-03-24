@@ -1,3 +1,4 @@
+
 const tablet = document.getElementById("tablet")
 
 const minutes_1 = document.querySelector("h1")
@@ -11,10 +12,12 @@ const cm2tile = document.getElementById("cam2_tile")
 const cm3tile = document.getElementById("cam3_tile")
 const cm4tile = document.getElementById("cam4_tile")
 
-const cam_screen1 =document.getElementById("#cam_screen1")
-const cam_screen2 =document.getElementById("#cam_screen2")
-const cam_screen3 =document.getElementById("#cam_screen3")
-const cam_screen4 =document.getElementById("#cam_screen4")
+const cam_screen1_ = document.getElementById("cam_screen1")
+const cam_screen2_ = document.getElementById("cam_screen2")
+const cam_screen3_ = document.getElementById("cam_screen3")
+const cam_screen4_ = document.getElementById("cam_screen4")
+
+cam_screen1_.style.opacity = 1
 
 const c1 = document.getElementById("counter1")
 const c2 = document.getElementById("counter2")
@@ -100,19 +103,40 @@ let counter_passing_four = () => {
 
 const change_room1 = () => {
     tablet.style.backgroundColor = "green"
+    cam_screen1_.style.opacity = 1
+
+    cam_screen2_.style.opacity = 0
+    cam_screen3_.style.opacity = 0
+    cam_screen4_.style.opacity = 0
 
 }
 
 const change_room2 = () => {
     tablet.style.backgroundColor = "yellow"
+    cam_screen2_.style.opacity = 2
+
+    cam_screen1_.style.opacity = 0
+    cam_screen3_.style.opacity = 0
+    cam_screen4_.style.opacity = 0
+
 }
 
 const change_room3 = () => {
     tablet.style.backgroundColor = "white"
+    cam_screen3_.style.opacity = 3
+
+    cam_screen1_.style.opacity = 0
+    cam_screen2_.style.opacity = 0
+    cam_screen4_.style.opacity = 0
 }
 
 const change_room4 = () => {
     tablet.style.backgroundColor = "blue"
+    cam_screen4_.style.opacity = 4
+
+    cam_screen1_.style.opacity = 0
+    cam_screen2_.style.opacity = 0
+    cam_screen3_.style.opacity = 0
 }
 
 cm1tile.addEventListener("click", change_room1)
