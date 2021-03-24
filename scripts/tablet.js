@@ -65,15 +65,31 @@ btn_check.addEventListener("click", () => {
 
 let counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 15)
 
     if(c1.textContent == 2) {
+
         c1.textContent = "he goes"
+
+        cam_screen1_.style.backgroundColor = "gold"
+
+    } else {
+        cam_screen1_.style.backgroundColor = "#9bdd029a"
+    }
+
+    if(c1.textContent == 1) {
+
+        c1.textContent = "he coming to you"
+
+        cam_screen1_.style.backgroundColor = "orangered"
+
+    } else {
+        cam_screen1_.style.backgroundColor = "#9bdd029a"
     }
 
 }
 
-let counter_passing_two = () => {
+/* let counter_passing_two = () => {
 
     c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 5)
 
@@ -101,7 +117,7 @@ let counter_passing_four = () => {
         c4.textContent = "he goes"
     }
 
-}
+} */
 
 const change_room1 = () => {
     
