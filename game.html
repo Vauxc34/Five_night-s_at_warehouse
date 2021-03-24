@@ -111,7 +111,12 @@
         border: none;
         margin: 40px;
         z-index: 2;
-        
+    }
+
+    #check:active {
+        box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
+        -webkit-box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
+        -moz-box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
     }
 
     #door {
@@ -125,6 +130,12 @@
         
     }
 
+    #door:active {
+        box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
+        -webkit-box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
+        -moz-box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
+    }
+
 
 
 </style>
@@ -133,10 +144,21 @@
         <div class="container">
         <div id="tablet">
             <div id="screen">
+                <div id="cam_screen1"></div>
+                <div id="cam_screen2"></div>
+                <div id="cam_screen3"></div>
+                <div id="cam_screen4"></div>
+                <span id="instruction">press escape button to exit from monitoring</span>
                 <span id="counter1">0_1</span>
                 <span id="counter2">0_2</span>
                 <span id="counter3">0_3</span>
                 <span id="counter4">0_4</span>
+                <span id="minimap">
+                    <div id="cam1"></div>
+                    <div id="cam2"></div>
+                    <div id="cam3"></div>
+                    <div id="cam4"></div>
+                </span>
             </div>
         </div>
         <div id="blured_screen">
@@ -155,7 +177,7 @@
 
         /* Scrolling effect */
 
-        const scroll_btn_right = document.getElementById("scroll-right")
+         const scroll_btn_right = document.getElementById("scroll-right")
         const scroll_btn_left = document.getElementById("scroll-left")
 
         let value_scroll = 0;
@@ -166,7 +188,6 @@
 
         const scrollingleft = () => {
             window.scroll(value_scroll--, 0)
-            
         }
 
         scroll_btn_right.addEventListener("mousemove", scrollingright)

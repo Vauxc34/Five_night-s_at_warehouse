@@ -6,8 +6,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  height: 70%;
-  width: 80%;
+  left: 0px;
+  height: 100%;
+  width: 100%;
   background-image: url(/textures/tablet.png);
   background-size: 100% 100%;
   z-index: 2;
@@ -20,9 +21,62 @@
   position: fixed;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 60%;
-  width: 75%;
+  height: 90%;
+  width: 90%;
   background-color: white;
+  z-index: 5;
+}
+
+#tablet #screen #instruction {
+  margin: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#tablet #screen #minimap {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  bottom: 25px;
+  right: 50px;
+  background-image: url(/textures/mini_map_cam1.png);
+  background-size: 100%;
+}
+
+#tablet #screen #minimap #cam1 {
+  position: absolute;
+  bottom: 33.6%;
+  right: 67%;
+  height: 91px;
+  width: 30px;
+  background-color: transparent;
+}
+
+#tablet #screen #minimap #cam2 {
+  position: absolute;
+  bottom: 28.9%;
+  right: 4.9%;
+  height: 65px;
+  width: 65px;
+  background-color: transparent;
+}
+
+#tablet #screen #minimap #cam3 {
+  position: absolute;
+  bottom: 58.9%;
+  right: 4.6%;
+  height: 67px;
+  width: 67px;
+  background-color: transparent;
+}
+
+#tablet #screen #minimap #cam4 {
+  position: absolute;
+  bottom: 74.3%;
+  right: 55.7%;
+  height: 31px;
+  width: 78px;
+  background-color: transparent;
 }
 
 #tablet #screen #counter1 {
@@ -51,5 +105,49 @@
       align-self: flex-start;
   font-size: 30px;
   margin: 30px;
+}
+
+#tablet #cam_screen1 {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 90%;
+  width: 90%;
+  background-color: white;
+  opacity: 0;
+}
+
+#tablet #cam_screen2 {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 90%;
+  width: 90%;
+  background-color: white;
+  opacity: 0;
+}
+
+#tablet #cam_screen3 {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 90%;
+  width: 90%;
+  background-color: white;
+  opacity: 0;
+}
+
+#tablet #cam_screen4 {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 90%;
+  width: 90%;
+  background-color: white;
+  opacity: 0;
 }
 /*# sourceMappingURL=tablet.css.map */
