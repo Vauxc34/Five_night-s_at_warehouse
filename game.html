@@ -38,17 +38,6 @@
         background-color: #00000044;
     }
 
-    #blured_screen {
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background-color: black;
-        opacity: 0;
-        z-index: -1;
-    }
-
     #scroll-right {
         position: fixed;
         top: 0%;
@@ -75,7 +64,7 @@
         border-top-left-radius:50px;
         border-top-right-radius:50px;
         background-color: #e07f0080;
-        z-index: 1;
+        z-index: -1;
     }
 
     h1 {
@@ -84,6 +73,7 @@
         left: 120px;
         font-size: 90px;
         color: white;
+        z-index: -1;
     }
 
     h2 {
@@ -91,6 +81,7 @@
         right: 120px;
         font-size: 90px;
         color: white;
+        z-index: -1;
     }
 
     #winner {
@@ -110,7 +101,7 @@
         border-radius: 50px;
         border: none;
         margin: 40px;
-        z-index: 2;
+        z-index: -1;
     }
 
     #check:active {
@@ -126,7 +117,7 @@
         border-radius: 50px;
         border: none;
         margin: 40px;
-        z-index: 2;
+        z-index: -1;
         
     }
 
