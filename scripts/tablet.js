@@ -102,7 +102,7 @@ let counter_passing_four = () => {
 }
 
 const change_room1 = () => {
-    tablet.style.backgroundColor = "green"
+    
     cam_screen1_.style.opacity = 1
 
     cam_screen2_.style.opacity = 0
@@ -112,7 +112,7 @@ const change_room1 = () => {
 }
 
 const change_room2 = () => {
-    tablet.style.backgroundColor = "yellow"
+    
     cam_screen2_.style.opacity = 2
 
     cam_screen1_.style.opacity = 0
@@ -122,7 +122,7 @@ const change_room2 = () => {
 }
 
 const change_room3 = () => {
-    tablet.style.backgroundColor = "white"
+    
     cam_screen3_.style.opacity = 3
 
     cam_screen1_.style.opacity = 0
@@ -131,7 +131,7 @@ const change_room3 = () => {
 }
 
 const change_room4 = () => {
-    tablet.style.backgroundColor = "blue"
+    
     cam_screen4_.style.opacity = 4
 
     cam_screen1_.style.opacity = 0
