@@ -52,12 +52,11 @@ btn_check.addEventListener("click", () => {
 
 const counter_passing = () => {
 
-    c1.textContent = counter_actual_value 
-    cm1tile.style.cursor = "pointer"
+    c1.textContent = counter_actual_value + Math.floor(Math.random() * 5)
 
 }
 
-cm1tile.addEventListener("mousemove", counter_passing)
+cm1tile.addEventListener("click", counter_passing)
 
 
 
