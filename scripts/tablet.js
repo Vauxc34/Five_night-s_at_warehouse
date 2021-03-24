@@ -77,10 +77,15 @@ const counter_passing_four = () => {
 
 }
 
-cm1tile.addEventListener("click", counter_passing_one)
+/*cm1tile.addEventListener("click", counter_passing_one)
 cm2tile.addEventListener("click", counter_passing_two)
 cm3tile.addEventListener("click", counter_passing_three)
-cm4tile.addEventListener("click", counter_passing_four)
+cm4tile.addEventListener("click", counter_passing_four)*/
+
+setInterval(counter_passing_one, 1000)
+setInterval(counter_passing_two, 1000)
+setInterval(counter_passing_three, 1000)
+setInterval(counter_passing_four, 1000)
 
 
 
