@@ -1,0 +1,55 @@
+#tablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  height: 70%;
+  width: 80%;
+  background-image: url(/textures/tablet.png);
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+#tablet #screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 60%;
+  width: 75%;
+  background-color: white;
+}
+
+#tablet #screen #counter1 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 30px;
+  margin: 30px;
+}
+
+#tablet #screen #counter2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 30px;
+  margin: 30px;
+}
+
+#tablet #screen #counter3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 30px;
+  margin: 30px;
+}
+
+#tablet #screen #counter4 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 30px;
+  margin: 30px;
+}
+/*# sourceMappingURL=tablet.css.map */
