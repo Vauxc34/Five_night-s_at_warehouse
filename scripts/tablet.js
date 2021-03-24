@@ -19,8 +19,6 @@ const cam_screen2_ = document.getElementById("cam_screen2")
 const cam_screen3_ = document.getElementById("cam_screen3")
 const cam_screen4_ = document.getElementById("cam_screen4")
 
-cam_screen1_.style.opacity = 1
-
 const c1 = document.getElementById("counter1")
 const c2 = document.getElementById("counter2")
 const c3 = document.getElementById("counter4")
@@ -44,6 +42,9 @@ btn_check.addEventListener("click", () => {
     hours_1.style.zIndex = -2
 
     tablet.style.transition = "0.25s"
+
+    cam_screen1_.style.opacity = 1
+    cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
     /* */
 
@@ -71,20 +72,12 @@ let counter_passing_one = () => {
 
         c1.textContent = "he goes"
 
-        cam_screen1_.style.backgroundColor = "gold"
-
-    } else {
-        cam_screen1_.style.backgroundColor = "#9bdd029a"
-    }
+    } 
 
     if(c1.textContent == 1) {
 
         c1.textContent = "he coming to you"
 
-        cam_screen1_.style.backgroundColor = "orangered"
-
-    } else {
-        cam_screen1_.style.backgroundColor = "#9bdd029a"
     }
 
 }
@@ -158,6 +151,9 @@ const change_room3 = () => {
     cam_screen4_.style.opacity = 0
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam3.png)"
+    cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+
+    cam_screen3_.style.backgroundSize = "100% 100%"
 
 }
 
@@ -170,6 +166,9 @@ const change_room4 = () => {
     cam_screen3_.style.opacity = 0
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam4.png)"
+    cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+
+    cam_screen4_.style.backgroundSize = "100% 100%"
 }
 
 cm1tile.addEventListener("click", change_room1)
@@ -178,9 +177,9 @@ cm4tile.addEventListener("click", change_room3)
 cm3tile.addEventListener("click", change_room4)
 
 setInterval(counter_passing_one, 1000)
-setInterval(counter_passing_two, 1000)
+/* setInterval(counter_passing_two, 1000)
 setInterval(counter_passing_three, 1000)
-setInterval(counter_passing_four, 1000)
+setInterval(counter_passing_four, 1000) */
 
 
 
