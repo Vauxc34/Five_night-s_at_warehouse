@@ -2,24 +2,28 @@
     display: flex
     justify-content: center
     position: fixed
+    top: 0px
     left: 0px
     height: 100%
     width: 100%
     background-image: url(/textures/tablet.png)
     background-size: 100% 100%
-    z-index: 2
+    z-index: 10
     #screen
         display: flex
         position: fixed
         align-self: center
-        height: 90%
-        width: 90%
+        top: 0px
+        left: 0px
+        height: 45%
+        width: 40%
         background-color: white
-        z-index: 5
+        z-index: 1
         #instruction
             margin: 20px
             font-size: 20px
             text-transform: uppercase
+            z-index: 2
         #minimap
             position: absolute
             height: 250px
@@ -29,33 +33,37 @@
             background-image: url(/textures/mini_map_cam1.png)
             background-size: 100%
             #cam1
-                position: absolute
+                position: fixed
                 bottom: 33.6%
                 right: 67%
                 height: 91px
                 width: 30px
                 background-color: transparent
+                z-index: 10
             #cam2
-                position: absolute
+                position: fixed
                 bottom: 28.9%
                 right: 4.9%
                 height: 65px
                 width: 65px
                 background-color: transparent
+                z-index: 10
             #cam3
-                position: absolute
+                position: fixed
                 bottom: 58.9%
                 right: 4.6%
                 height: 67px
                 width: 67px
                 background-color: transparent
+                z-index: 10
             #cam4
-                position: absolute
+                position: fixed
                 bottom: 74.3%
                 right: 55.7%
                 height: 31px
                 width: 78px
                 background-color: transparent
+                z-index: 10
 
         #counter1
             align-self: flex-end
@@ -77,10 +85,12 @@
     #cam_screen1
         position: fixed
         align-self: center
-        height: 90%
-        width: 90%
-        background-color: white
-        opacity: 0
+        left: 0px
+        height: 100%
+        width: 100%
+        background-image: url(/textures/cam_room_without_animatronic/room_cam1.png)
+        background-size: cover
+        z-index: 1
     #cam_screen2
         position: fixed
         align-self: center
