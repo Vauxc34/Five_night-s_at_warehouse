@@ -83,6 +83,7 @@
   width: 100px;
   background-color: #9b19199c;
   cursor: pointer;
+  z-index: 1;
 }
 
 #tablet #screen #counter1 {

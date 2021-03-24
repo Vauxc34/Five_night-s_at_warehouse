@@ -13,10 +13,13 @@ const cm4tile = document.getElementById("cam4_tile")
 
 const c1 = document.getElementById("counter1")
 const c2 = document.getElementById("counter2")
-const c3 = document.getElementById("counter3")
-const c4 = document.getElementById("counter4")
+const c3 = document.getElementById("counter4")
+const c4 = document.getElementById("counter3")
 
-let counter_actual_value = 0
+let counter_actual_value_1 = 0
+let counter_actual_value_2 = 0
+let counter_actual_value_3 = 0
+let counter_actual_value_4 = 0
 
 btn_check.addEventListener("click", () => {
 
@@ -50,13 +53,34 @@ btn_check.addEventListener("click", () => {
 
 })
 
-const counter_passing = () => {
+const counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value + Math.floor(Math.random() * 5)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
 
 }
 
-cm1tile.addEventListener("click", counter_passing)
+const counter_passing_two = () => {
+
+    c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 5)
+
+}
+
+const counter_passing_three = () => {
+
+    c3.textContent = counter_actual_value_3 + Math.floor(Math.random() * 5)
+
+}
+
+const counter_passing_four = () => {
+
+    c4.textContent = counter_actual_value_4 + Math.floor(Math.random() * 5)
+
+}
+
+cm1tile.addEventListener("click", counter_passing_one)
+cm2tile.addEventListener("click", counter_passing_two)
+cm3tile.addEventListener("click", counter_passing_three)
+cm4tile.addEventListener("click", counter_passing_four)
 
 
 
