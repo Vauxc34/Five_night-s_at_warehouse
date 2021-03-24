@@ -77,10 +77,26 @@ const counter_passing_four = () => {
 
 }
 
-/*cm1tile.addEventListener("click", counter_passing_one)
-cm2tile.addEventListener("click", counter_passing_two)
-cm3tile.addEventListener("click", counter_passing_three)
-cm4tile.addEventListener("click", counter_passing_four)*/
+const change_room1 = () => {
+    tablet.style.backgroundColor = "green"
+}
+
+const change_room2 = () => {
+    tablet.style.backgroundColor = "yellow"
+}
+
+const change_room3 = () => {
+    tablet.style.backgroundColor = "white"
+}
+
+const change_room4 = () => {
+    tablet.style.backgroundColor = "blue"
+}
+
+cm1tile.addEventListener("click", change_room1)
+cm2tile.addEventListener("click", change_room2)
+cm3tile.addEventListener("click", change_room3)
+cm4tile.addEventListener("click", change_room4)
 
 setInterval(counter_passing_one, 1000)
 setInterval(counter_passing_two, 1000)
