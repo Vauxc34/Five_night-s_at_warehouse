@@ -7,6 +7,8 @@ const hours_1 = document.querySelector("h2")
 const btn_check = document.getElementById("check")
 const btn_doors = document.getElementById("door")
 
+const mini_map = document.getElementById("minimap")
+
 const cm1tile = document.getElementById("cam1_tile")
 const cm2tile = document.getElementById("cam2_tile")
 const cm3tile = document.getElementById("cam3_tile")
@@ -109,6 +111,8 @@ const change_room1 = () => {
     cam_screen3_.style.opacity = 0
     cam_screen4_.style.opacity = 0
 
+    mini_map.style.backgroundImage = "url(/textures/mini_map_cam1.png)"
+
 }
 
 const change_room2 = () => {
@@ -119,30 +123,37 @@ const change_room2 = () => {
     cam_screen3_.style.opacity = 0
     cam_screen4_.style.opacity = 0
 
+    mini_map.style.backgroundImage = "url(/textures/mini_map_cam2.png)"
+
 }
 
 const change_room3 = () => {
     
-    cam_screen3_.style.opacity = 3
+    cam_screen3_.style.opacity = 4
 
     cam_screen1_.style.opacity = 0
     cam_screen2_.style.opacity = 0
     cam_screen4_.style.opacity = 0
+
+    mini_map.style.backgroundImage = "url(/textures/mini_map_cam3.png)"
+
 }
 
 const change_room4 = () => {
     
-    cam_screen4_.style.opacity = 4
+    cam_screen4_.style.opacity = 3
 
     cam_screen1_.style.opacity = 0
     cam_screen2_.style.opacity = 0
     cam_screen3_.style.opacity = 0
+
+    mini_map.style.backgroundImage = "url(/textures/mini_map_cam4.png)"
 }
 
 cm1tile.addEventListener("click", change_room1)
 cm2tile.addEventListener("click", change_room2)
-cm3tile.addEventListener("click", change_room3)
-cm4tile.addEventListener("click", change_room4)
+cm4tile.addEventListener("click", change_room3)
+cm3tile.addEventListener("click", change_room4)
 
 setInterval(counter_passing_one, 1000)
 setInterval(counter_passing_two, 1000)

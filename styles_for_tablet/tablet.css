@@ -47,7 +47,7 @@
   right: 66.5%;
   height: 135px;
   width: 45px;
-  background-color: #9b19199c;
+  background-color: transparent;
   cursor: pointer;
   z-index: 1;
 }
@@ -58,7 +58,7 @@
   right: 55%;
   height: 50px;
   width: 115px;
-  background-color: #9b19199c;
+  background-color: transparent;
   cursor: pointer;
   z-index: 1;
 }
@@ -69,7 +69,7 @@
   right: 3.75%;
   height: 97.5px;
   width: 100px;
-  background-color: #9b19199c;
+  background-color: transparent;
   cursor: pointer;
   z-index: 1;
 }
@@ -80,7 +80,7 @@
   right: 3.65%;
   height: 100px;
   width: 100px;
-  background-color: #9b19199c;
+  background-color: transparent;
   cursor: pointer;
   z-index: 1;
 }
@@ -122,7 +122,7 @@
   left: 5%;
   height: 90%;
   width: 90%;
-  background-color: red;
+  background-color: #9bdd029a;
   opacity: 0;
 }
 
@@ -135,7 +135,7 @@
   left: 5%;
   height: 90%;
   width: 90%;
-  background-color: yellow;
+  background-color: #c40c5893;
   opacity: 0;
 }
 
@@ -148,7 +148,7 @@
   left: 5%;
   height: 90%;
   width: 90%;
-  background-color: green;
+  background-color: #1808908b;
   opacity: 0;
 }
 
