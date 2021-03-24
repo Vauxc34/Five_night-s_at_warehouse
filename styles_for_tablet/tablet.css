@@ -60,6 +60,7 @@
   height: 50px;
   width: 115px;
   background-color: #9b19199c;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -70,6 +71,7 @@
   height: 97.5px;
   width: 100px;
   background-color: #9b19199c;
+  cursor: pointer;
   z-index: 1;
 }
 
