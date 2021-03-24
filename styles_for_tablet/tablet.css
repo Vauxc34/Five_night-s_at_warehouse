@@ -16,12 +16,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: fixed;
   -ms-flex-item-align: center;
       align-self: center;
   height: 100%;
   width: 100%;
-  background-color: #a40c0c47;
+  background-color: #0ca40c47;
+  z-index: -1;
 }
 
 #tablet #screen #instruction {
@@ -112,49 +113,44 @@
   margin: 80px;
 }
 
-#tablet #cam_screen1 {
-  position: fixed;
+#cam_screen1 {
+  position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   left: 0px;
-  height: 100%;
-  width: 100%;
-  background-image: url(/textures/cam_room_without_animatronic/room_cam1.png);
-  background-size: cover;
-  z-index: 1;
+  height: 10%;
+  width: 10%;
+  background-color: red;
 }
 
-#tablet #cam_screen2 {
-  position: fixed;
+#cam_screen2 {
+  position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 90%;
-  width: 90%;
-  background-color: white;
-  opacity: 0;
+  height: 10%;
+  width: 10%;
+  background-color: yellow;
 }
 
-#tablet #cam_screen3 {
-  position: fixed;
+#cam_screen3 {
+  position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 90%;
-  width: 90%;
-  background-color: white;
-  opacity: 0;
+  height: 10%;
+  width: 10%;
+  background-color: green;
 }
 
-#tablet #cam_screen4 {
-  position: fixed;
+#cam_screen4 {
+  position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 90%;
-  width: 90%;
-  background-color: white;
-  opacity: 0;
+  height: 10%;
+  width: 10%;
+  background-color: brown;
 }
 /*# sourceMappingURL=tablet.css.map */

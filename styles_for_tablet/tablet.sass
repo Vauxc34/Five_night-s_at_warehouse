@@ -8,11 +8,12 @@
     width: 100%
     #screen
         display: flex
-        position: absolute
+        position: fixed
         align-self: center
         height: 100%
         width: 100%
-        background-color: #a40c0c47
+        background-color: #0ca40c47
+        z-index: -1
         #instruction
             margin: 25px
             font-size: 20px
@@ -79,33 +80,33 @@
             font-size: 30px
             margin: 80px
 
-    #cam_screen1
-        position: fixed
-        align-self: center
-        left: 0px
-        height: 100%
-        width: 100%
-        background-image: url(/textures/cam_room_without_animatronic/room_cam1.png)
-        background-size: cover
-        z-index: 1
-    #cam_screen2
-        position: fixed
-        align-self: center
-        height: 90%
-        width: 90%
-        background-color: white
-        opacity: 0
-    #cam_screen3
-        position: fixed
-        align-self: center
-        height: 90%
-        width: 90%
-        background-color: white
-        opacity: 0
-    #cam_screen4
-        position: fixed
-        align-self: center
-        height: 90%
-        width: 90%
-        background-color: white
-        opacity: 0
+
+#cam_screen1
+    position: absolute
+    align-self: center
+    left: 0px
+    height: 10%
+    width: 10%
+    background-color: red
+    
+#cam_screen2
+    position: absolute
+    align-self: center
+    height: 10%
+    width: 10%
+    background-color: yellow
+    
+#cam_screen3
+    position: absolute
+    align-self: center
+    height: 10%
+    width: 10%
+    background-color: green
+    
+#cam_screen4
+    position: absolute
+    align-self: center
+    height: 10%
+    width: 10%
+    background-color: brown
+    
