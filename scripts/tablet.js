@@ -53,32 +53,49 @@ btn_check.addEventListener("click", () => {
 
 })
 
-const counter_passing_one = () => {
+let counter_passing_one = () => {
 
     c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
 
+    if(c1.textContent == 2) {
+        tablet.style.backgroundColor = "lawngreen"
+    }
+
 }
 
-const counter_passing_two = () => {
+let counter_passing_two = () => {
 
     c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 5)
 
+    if(c2.textContent == 2) {
+        tablet.style.backgroundColor = "khaki"
+    }
+
 }
 
-const counter_passing_three = () => {
+let counter_passing_three = () => {
 
     c3.textContent = counter_actual_value_3 + Math.floor(Math.random() * 5)
 
+    if(c3.textContent == 2) {
+        tablet.style.backgroundColor = "honeydew"
+    }
+
 }
 
-const counter_passing_four = () => {
+let counter_passing_four = () => {
 
     c4.textContent = counter_actual_value_4 + Math.floor(Math.random() * 5)
+
+    if(c4.textContent == 2) {
+        tablet.style.backgroundColor = "aquamarine"
+    }
 
 }
 
 const change_room1 = () => {
     tablet.style.backgroundColor = "green"
+
 }
 
 const change_room2 = () => {
