@@ -1,11 +1,13 @@
-
 const tablet = document.getElementById("tablet")
 
 const minutes_1 = document.querySelector("h1")
 const hours_1 = document.querySelector("h2")
 
+const btn_area = document.getElementById("btn_container")
 const btn_check = document.getElementById("check")
 const btn_doors = document.getElementById("door")
+
+const room = document.getElementById("room")
 
 const mini_map = document.getElementById("minimap")
 
@@ -34,16 +36,26 @@ btn_check.addEventListener("click", () => {
     /*hiding buttons and showing/hiding tablet*/
 
     tablet.style.top = "0px"
+
+    btn_area.style.opacity = 0
+
     btn_check.style.zIndex = -2
     btn_doors.style.zIndex = -2
+
     btn_check.style.opacity = 0
     btn_doors.style.opacity = 0
+
     minutes_1.style.zIndex = -2
     hours_1.style.zIndex = -2
 
+    hours_1.style.opacity = 0
+    minutes_1.style.opacity = 0
+
+    room.style.backgroundImage = "url(/textures/black_screen.png)"
+
     tablet.style.transition = "0.25s"
 
-    cam_screen1_.style.opacity = 1
+    cam_screen1_.style.opacity = 0.8
     cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
     /* */
@@ -52,10 +64,17 @@ btn_check.addEventListener("click", () => {
 
         if(event.keyCode === 27) {
             tablet.style.top = "-10000px"
-            btn_check.style.zIndex = "2"
-            btn_doors.style.zIndex = "2"
-            btn_check.style.opacity = "1"
-            btn_doors.style.opacity = "1"
+            room.style.backgroundImage = "url(textures/room.png)"
+
+            btn_check.style.zIndex = 2
+            btn_doors.style.zIndex = 2
+
+            btn_check.style.opacity = 1
+            btn_doors.style.opacity = 1
+            btn_area.style.opacity = 1
+
+            hours_1.style.opacity = 1
+            minutes_1.style.opacity = 1
         }
     
     }
@@ -114,7 +133,7 @@ let counter_passing_four = () => {
 
 const change_room1 = () => {
     
-    cam_screen1_.style.opacity = 1
+    cam_screen1_.style.opacity = 0.8
 
     cam_screen2_.style.opacity = 0
     cam_screen3_.style.opacity = 0
@@ -129,7 +148,7 @@ const change_room1 = () => {
 
 const change_room2 = () => {
     
-    cam_screen2_.style.opacity = 2
+    cam_screen2_.style.opacity = 0.8
 
     cam_screen1_.style.opacity = 0
     cam_screen3_.style.opacity = 0
@@ -144,7 +163,7 @@ const change_room2 = () => {
 
 const change_room3 = () => {
     
-    cam_screen3_.style.opacity = 4
+    cam_screen3_.style.opacity = 0.8
 
     cam_screen1_.style.opacity = 0
     cam_screen2_.style.opacity = 0
@@ -159,7 +178,7 @@ const change_room3 = () => {
 
 const change_room4 = () => {
     
-    cam_screen4_.style.opacity = 3
+    cam_screen4_.style.opacity = 0.8
 
     cam_screen1_.style.opacity = 0
     cam_screen2_.style.opacity = 0
