@@ -5,7 +5,7 @@ const hours_1 = document.querySelector("h2")
 
 const btn_area = document.getElementById("btn_container")
 const btn_check = document.getElementById("check")
-const btn_doors = document.getElementById("door")
+const btn_mask_ = document.getElementById("door")
 
 const room = document.getElementById("room")
 
@@ -40,10 +40,10 @@ btn_check.addEventListener("click", () => {
     btn_area.style.opacity = 0
 
     btn_check.style.zIndex = -2
-    btn_doors.style.zIndex = -2
+    btn_mask_.style.zIndex = -2
 
     btn_check.style.opacity = 0
-    btn_doors.style.opacity = 0
+    btn_mask_.style.opacity = 0
 
     minutes_1.style.zIndex = -2
     hours_1.style.zIndex = -2
@@ -87,10 +87,10 @@ btn_check.addEventListener("click", () => {
             room.style.backgroundImage = "url(textures/room.png)"
 
             btn_check.style.zIndex = 2
-            btn_doors.style.zIndex = 2
+            btn_mask_.style.zIndex = 2
 
             btn_check.style.opacity = 1
-            btn_doors.style.opacity = 1
+            btn_mask_.style.opacity = 1
             btn_area.style.opacity = 1
 
             hours_1.style.opacity = 1
@@ -100,7 +100,7 @@ btn_check.addEventListener("click", () => {
 
         }
     
-    }
+    } 
     
     window.addEventListener("keydown", hiding_menu)
 
@@ -111,6 +111,8 @@ let counter_passing_one = () => {
     c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
 
     if(c1.textContent == 0) {
+
+        //Room with animatronic
 
         cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
@@ -125,7 +127,11 @@ let counter_passing_one = () => {
 
     }if(c1.textContent == "he goes") {
 
+        //Room without animatronic
+
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+
+        //
 
         cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
@@ -137,15 +143,26 @@ let counter_passing_one = () => {
 
     if(c1.textContent == 2) {
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        //Room 2 with animatronic
 
         cam_screen2_.style.backgroundImage = "url(/textures/room_with_animatronic/cam2_rom.png)"
+
+        //
+
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+
 
     }
 
     if(c1.textContent == 3) {
 
+        //Room 1 with animatronic
+
         cam_screen1_.style.backgroundImage = "url(/textures/room_with_animatronic/cam1_rom.png)"
+
+        //
 
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
@@ -157,11 +174,17 @@ let counter_passing_one = () => {
 
     if(c1.textContent == 4) {
 
+        //Room 4 with animatronic
+
         cam_screen4_.style.backgroundImage = "url(/textures/room_with_animatronic/cam4_rom.png)"
 
-        c1.textContent = 0
+        //
 
-    }
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+
+    } 
 
 }
 

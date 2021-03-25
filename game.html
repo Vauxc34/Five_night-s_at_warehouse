@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night 1</title>
     <link rel="stylesheet" href="styles_for_tablet/tablet.css">
+    <link rel="stylesheet" href="styles_for_mask/mask.css">
 </head>
 <style>
 
@@ -29,7 +30,7 @@
         z-index: 10;
     }
 
-    .container {
+    #container {
         position: fixed;
         display: flex;
         justify-content: center;
@@ -103,9 +104,10 @@
         width: 20%;
         border-radius: 50px;
         border: none;
+        text-transform: uppercase;
         margin: 40px;
         z-index: 0;
-        transition: 0.25s;
+        transition: 0.15s;
         cursor: pointer;
     }
 
@@ -121,9 +123,10 @@
         width: 20%;
         border-radius: 50px;
         border: none;
+        text-transform: uppercase;
         margin: 40px;
         z-index: 0;
-        transition: 0.25s;
+        transition: 0.15s;
         cursor: pointer;
     }
 
@@ -138,25 +141,25 @@
 </style>
 <body>
     <div id="room">
-        <div class="container">
+        <div id="container">
         <div id="tablet">
             <div id="screen">
 
                 <div id="cam_screen1">
-                    <span id="instruction">press escape button to exit from monitoring</span>
+                    <span id="instruction">press escape button to exit from monitoring mode</span>
                     <span id="counter1">C_1</span>
                 <!--<span id="counter2">C_2</span>
                     <span id="counter3">C_3</span>
                     <span id="counter4">C_4</span>--> 
                 </div>
                 <div id="cam_screen2">
-                    <span id="instruction">press escape button to exit from monitoring</span>
+                    <span id="instruction">press escape button to exit from monitoring mode</span>
                 </div>
                 <div id="cam_screen3">
-                    <span id="instruction">press escape button to exit from monitoring</span>
+                    <span id="instruction">press escape button to exit from monitoring mode</span>
                 </div>
                 <div id="cam_screen4">
-                    <span id="instruction">press escape button to exit from monitoring</span>
+                    <span id="instruction">press escape button to exit from monitoring mode</span>
                 </div>
 
                 <span id="minimap">
@@ -173,12 +176,13 @@
         </div>
         <h1>Night 1</h1>
         <h2>00:00</h2>
-        <button id="door">door light</button><button id="check">check</button>
+        <button id="door">mask on</button><button id="check">check</button>
         <div id="btn_container">
             <div id="scroll-right"></div>
             <div id="scroll-left"></div>
         </div>
         </div>
+        <div id="mask"></div>
     </div>
     <script>
 
@@ -272,6 +276,29 @@
 
 
         /* */
+
+        const mask = document.getElementById("mask")
+        const btn_mask = document.getElementById("door")
+
+        const mask_on = () => {
+
+        mask.style.bottom = "0px"
+
+        }
+
+        btn_mask.addEventListener("click", mask_on)
+
+        const mask_off = () => {
+            
+        if(event.keyCode === 77) {
+
+        mask.style.bottom = "-1000px"
+
+        }
+
+        }
+
+        document.body.addEventListener("keydown", mask_off)
 
 
 
