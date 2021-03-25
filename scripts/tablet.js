@@ -263,7 +263,7 @@ let counter_passing_three = () => {
 
     if (counter_actual_value_3 == 5) {
         
-    c3.textContent = "you are dead meat"
+    jumpscare.style.bottom = "0px"
 
     console.log("you are dead meat")
 

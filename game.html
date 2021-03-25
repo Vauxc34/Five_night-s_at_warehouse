@@ -104,7 +104,6 @@
         border: none;
         text-transform: uppercase;
         margin: 40px;
-        z-index: 0;
         transition: 0.15s;
         cursor: pointer;
     }
@@ -123,7 +122,6 @@
         border: none;
         text-transform: uppercase;
         margin: 40px;
-        z-index: 0;
         transition: 0.15s;
         cursor: pointer;
     }
@@ -136,9 +134,13 @@
 
     #jumpscare {
         position: fixed;
+        bottom: -1000px;
         height: 100%;
-        width: 50%;
-        background-image: url(/textures/Doge-Meme-Transparent-PNG.png);
+        width: 100%;
+        background-image: url(/textures/jumpscare.png);
+        background-repeat: no-repeat;
+        background-size: 90% 100%;
+        transition: 0.25s
     }
 
 
