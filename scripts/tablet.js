@@ -265,7 +265,13 @@ let counter_passing_three = () => {
         
     jumpscare.style.bottom = "0px"
 
-    console.log("you are dead meat")
+    /* if(jumpscare.style.bottom = "0px") {
+
+    setInterval(ending_game, 1000)
+
+    const ending_game = () => { location.href = "you_are_loser.html" }
+
+    } */
 
     clearInterval(counter_actual_value_3)
 
