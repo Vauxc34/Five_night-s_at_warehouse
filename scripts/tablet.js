@@ -145,7 +145,7 @@ let counter_passing_one = () => {
 
     } else {
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
@@ -166,7 +166,7 @@ let counter_passing_one = () => {
 
     } else {
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
@@ -186,7 +186,7 @@ let counter_passing_one = () => {
 
     } else {
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
