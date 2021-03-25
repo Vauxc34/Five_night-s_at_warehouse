@@ -265,6 +265,8 @@ let counter_passing_three = () => {
         
     jumpscare.style.bottom = "0px"
 
+    mask.style.bottom = "-1000px"
+
     /* if(jumpscare.style.bottom = "0px") {
 
     setInterval(ending_game, 1000)

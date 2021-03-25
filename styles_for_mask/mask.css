@@ -7,7 +7,7 @@
   border-top-right-radius: 25%;
   background-image: url(/textures/mask.png);
   background-size: 100% 110%;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 /*# sourceMappingURL=mask.css.map */
