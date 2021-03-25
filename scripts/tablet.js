@@ -56,7 +56,27 @@ btn_check.addEventListener("click", () => {
     tablet.style.transition = "0.25s"
 
     cam_screen1_.style.opacity = 0.8
+
     cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+
+    if(cam_screen2_.style.opacity == 0.8) {
+        
+        cam_screen1_.style.opacity = 0
+
+    }
+
+    if(cam_screen3_.style.opacity == 0.8) {
+        
+        cam_screen1_.style.opacity = 0
+
+    }
+
+    if(cam_screen4_.style.opacity == 0.8) {
+        
+        cam_screen1_.style.opacity = 0
+
+    }
+
 
     /* */
 
@@ -75,6 +95,9 @@ btn_check.addEventListener("click", () => {
 
             hours_1.style.opacity = 1
             minutes_1.style.opacity = 1
+
+            tablet.style.transition = "0.25s"
+
         }
     
     }
@@ -85,17 +108,58 @@ btn_check.addEventListener("click", () => {
 
 let counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 15)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
 
-    if(c1.textContent == 2) {
+    if(c1.textContent == 0) {
 
-        c1.textContent = "he goes"
-
-    } 
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        
+    }
 
     if(c1.textContent == 1) {
 
-        c1.textContent = "he coming to you"
+        c1.textContent = "he goes"
+
+    }if(c1.textContent == "he goes") {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+
+        c1.textContent = 2
+
+    }
+
+    if(c1.textContent == 2) {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+
+        cam_screen2_.style.backgroundImage = "url(/textures/room_with_animatronic/cam2_rom.png)"
+
+    }
+
+    if(c1.textContent == 3) {
+
+        cam_screen1_.style.backgroundImage = "url(/textures/room_with_animatronic/cam1_rom.png)"
+
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+
+        c1.textContent = 3
+
+    }
+
+    if(c1.textContent == 4) {
+
+        cam_screen4_.style.backgroundImage = "url(/textures/room_with_animatronic/cam4_rom.png)"
+
+        c1.textContent = 0
 
     }
 
@@ -141,8 +205,8 @@ const change_room1 = () => {
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam1.png)"
 
-    cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
-    cam_screen1_.style.backgroundSize = "100% 100%"
+    room.style.backgroundImage = "url(/textures/black_screen.png)"
+
 
 }
 
@@ -156,8 +220,7 @@ const change_room2 = () => {
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam2.png)"
 
-    cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
-    cam_screen2_.style.backgroundSize = "100% 100%"
+    room.style.backgroundImage = "url(/textures/black_screen.png)"
 
 }
 
@@ -170,9 +233,15 @@ const change_room3 = () => {
     cam_screen4_.style.opacity = 0
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam3.png)"
-    cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
-    cam_screen3_.style.backgroundSize = "100% 100%"
+    room.style.backgroundImage = "url(/textures/black_screen.png)"
+
+    if(c1.textContent == "he goes") {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+
+    }
+
 
 }
 
@@ -185,9 +254,10 @@ const change_room4 = () => {
     cam_screen3_.style.opacity = 0
 
     mini_map.style.backgroundImage = "url(/textures/mini_map_cam4.png)"
-    cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
 
-    cam_screen4_.style.backgroundSize = "100% 100%"
+    room.style.backgroundImage = "url(/textures/black_screen.png)"
+
+
 }
 
 cm1tile.addEventListener("click", change_room1)

@@ -92,6 +92,7 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 30px;
+  color: white;
   margin: 80px;
 }
 
@@ -99,6 +100,7 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 30px;
+  color: white;
   margin: 80px;
 }
 
@@ -113,6 +115,7 @@
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-size: 30px;
+  color: white;
   margin: 80px;
 }
 
