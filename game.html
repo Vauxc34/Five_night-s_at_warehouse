@@ -134,6 +134,13 @@
         -moz-box-shadow: 1px 2px 5px 10px rgba(0,0,0,0.25) inset;
     }
 
+    #jumpscare {
+        position: fixed;
+        height: 100%;
+        width: 50%;
+        background-image: url(/textures/Doge-Meme-Transparent-PNG.png);
+    }
+
 
 
 </style>
@@ -146,9 +153,9 @@
                 <div id="cam_screen1">
                     <span id="instruction">press escape button to exit from monitoring mode</span>
                     <span id="counter1">C_1</span>
-                <!--<span id="counter2">C_2</span>
-                    <span id="counter3">C_3</span>
-                    <span id="counter4">C_4</span>--> 
+                    <span id="counter2">C_2</span>
+                    <span id="counter3">5</span>
+                <!--<span id="counter4">C_4</span>--> 
                 </div>
                 <div id="cam_screen2">
                     <span id="instruction">press escape button to exit from monitoring mode</span>
@@ -181,6 +188,7 @@
         </div>
         </div>
         <div id="mask"></div>
+        <div id="jumpscare"></div>
     </div>
     <script>
 
@@ -285,29 +293,6 @@
 
 
         /* */
-
-        const mask = document.getElementById("mask")
-        const btn_mask = document.getElementById("door")
-
-        const mask_on = () => {
-
-        mask.style.bottom = "0px"
-
-        }
-
-        btn_mask.addEventListener("click", mask_on)
-
-        const mask_off = () => {
-            
-        if(event.keyCode === 77) {
-
-        mask.style.bottom = "-1000px"
-
-        }
-
-        }
-
-        document.body.addEventListener("keydown", mask_off)
 
 
 

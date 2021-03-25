@@ -1,5 +1,7 @@
 const tablet = document.getElementById("tablet")
 
+const scr = document.getElementById("screen")
+
 const minutes_1 = document.querySelector("h1")
 const hours_1 = document.querySelector("h2")
 
@@ -23,8 +25,8 @@ const cam_screen4_ = document.getElementById("cam_screen4")
 
 const c1 = document.getElementById("counter1")
 const c2 = document.getElementById("counter2")
-const c3 = document.getElementById("counter4")
-const c4 = document.getElementById("counter3")
+const c3 = document.getElementById("counter3")
+const c4 = document.getElementById("counter4")
 
 let counter_actual_value_1 = 0
 let counter_actual_value_2 = 0
@@ -186,31 +188,97 @@ let counter_passing_one = () => {
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
+        //
+
+        setInterval(counter_passing_two, 10000)
+
     } 
 
 }
 
-/* let counter_passing_two = () => {
+ let counter_passing_two = () => {
 
-    c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 5)
+    c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 10)
 
-    if(c2.textContent == 2) {
-        c2.textContent = "he goes"
+    //
+
+
+
+    if(c2.textContent == 10) {
+
+        c2.textContent = "he is near you"
+
+        room.style.backgroundImage = "url(/textures/room_doge_left_side.png)"
+
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+
+        console.log("left")
+
+        setInterval(counter_passing_three, 1000)
+
+        /* jumpscare */
+
+        /* if(room.style.backgroundImage = "url(/textures/room_doge_left_side.png)") {
+
+            setInterval(counter_passing_three, 2000)
+
+        } */
+
+
+    } else {
+
+        room.style.backgroundImage = "url(/textures/room.png)"
+
+    }
+
+    if(c2.textContent == 5) {
+
+        c2.textContent = "he is nearest you"
+
+        room.style.backgroundImage = "url(/textures/room_doge_right_side.png)"
+
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+
+        console.log("right")
+
+        setInterval(counter_passing_three, 1000)
+
+    }else {
+
+        room.style.backgroundImage = "url(/textures/room.png)"
+
     }
 
 }
 
 let counter_passing_three = () => {
 
-    c3.textContent = counter_actual_value_3 + Math.floor(Math.random() * 5)
+    c3.textContent = counter_actual_value_3++
 
-    if(c3.textContent == 2) {
-        c3.textContent = "he goes"
+    if (counter_actual_value_3 == 5) {
+        
+    c3.textContent = "you are dead meat"
+
+    console.log("you are dead meat")
+
+    clearInterval(counter_actual_value_3)
+
+    } else {
+
+        clearInterval(counter_actual_value_3)
+
     }
 
 }
 
-let counter_passing_four = () => {
+
+/* let counter_passing_four = () => {
 
     c4.textContent = counter_actual_value_4 + Math.floor(Math.random() * 5)
 
@@ -291,11 +359,47 @@ cm4tile.addEventListener("click", change_room3)
 cm3tile.addEventListener("click", change_room4)
 
 setInterval(counter_passing_one, 1000)
-/* setInterval(counter_passing_two, 1000)
-setInterval(counter_passing_three, 1000)
+/* 
 setInterval(counter_passing_four, 1000) */
 
+/* mask */
 
+        const mask = document.getElementById("mask")
+        const btn_mask = document.getElementById("door")
+
+        const mask_on = () => {
+
+        mask.style.bottom = "0px"
+
+        }
+
+        btn_mask.addEventListener("click", mask_on)
+
+        const mask_off = () => {
+            
+        if(event.keyCode === 77) {
+
+        mask.style.bottom = "-1000px"
+
+        }
+
+        if(mask.style.bottom = "-1000px") {
+
+            room.style.backgroundImage = "url(/textures/room.png)"
+
+            clearInterval(counter_actual_value_1)
+            clearInterval(counter_actual_value_2)
+            clearInterval(counter_actual_value_3)
+
+        }
+
+        }
+
+        document.body.addEventListener("keydown", mask_off)
+
+    /* jumpscare */
+
+    const jumpscare = document.getElementById("jumpscare")
 
 
 
