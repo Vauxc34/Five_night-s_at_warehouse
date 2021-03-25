@@ -112,7 +112,7 @@ btn_check.addEventListener("click", () => {
 
 let counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 5)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 10)
 
     if(c1.textContent == 0) {
 
@@ -265,7 +265,7 @@ let counter_passing_three = () => {
         
     jumpscare.style.bottom = "0px"
 
-    mask.style.bottom = "-1000px"
+    mask.style.bottom = "-10000px"
 
     /* if(jumpscare.style.bottom = "0px") {
 
@@ -387,11 +387,11 @@ setInterval(counter_passing_four, 1000) */
             
         if(event.keyCode === 77) {
 
-        mask.style.bottom = "-1000px"
+        mask.style.bottom = "-10000px"
 
         }
 
-        if(mask.style.bottom = "-1000px") {
+        if(mask.style.bottom = "-10000px") {
 
             room.style.backgroundImage = "url(/textures/room.png)"
 
