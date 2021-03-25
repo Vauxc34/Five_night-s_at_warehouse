@@ -112,7 +112,7 @@ btn_check.addEventListener("click", () => {
 
 let counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 10)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 20)
 
     if(c1.textContent == 0) {
 
@@ -125,7 +125,7 @@ let counter_passing_one = () => {
         
     }
 
-    if(c1.textContent == 1) {
+    if(c1.textContent == 2) {
 
         c1.textContent = "he goes"
 
@@ -133,7 +133,7 @@ let counter_passing_one = () => {
 
         //Room without animatronic
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
         //
 
@@ -141,11 +141,15 @@ let counter_passing_one = () => {
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
-        c1.textContent = 2
+        c1.textContent = 4
+
+    } else {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
     }
 
-    if(c1.textContent == 2) {
+    if(c1.textContent == 4) {
 
         //Room 2 with animatronic
 
@@ -157,10 +161,16 @@ let counter_passing_one = () => {
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
         cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
 
+        console.log("he was here")
+
+
+    } else {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
     }
 
-    if(c1.textContent == 3) {
+    if(c1.textContent == 6) {
 
         //Room 1 with animatronic
 
@@ -172,11 +182,15 @@ let counter_passing_one = () => {
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
         cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
 
-        c1.textContent = 3
+        c1.textContent = 8
+
+    } else {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
     }
 
-    if(c1.textContent == 4) {
+    if(c1.textContent == 8) {
 
         //Room 4 with animatronic
 
@@ -184,15 +198,17 @@ let counter_passing_one = () => {
 
         //
 
-        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
-        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
-        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
         //
 
         setInterval(counter_passing_two, 10000)
 
-    } 
+    } else {
+
+        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+
+    }
 
 }
 
@@ -267,13 +283,11 @@ let counter_passing_three = () => {
 
     mask.style.bottom = "-10000px"
 
-    /* if(jumpscare.style.bottom = "0px") {
-
-    setInterval(ending_game, 1000)
+    if(jumpscare.style.bottom = "0px") {
 
     const ending_game = () => { location.href = "you_are_loser.html" }
 
-    } */
+    }
 
     clearInterval(counter_actual_value_3)
 
