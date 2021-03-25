@@ -91,7 +91,7 @@
         position: absolute;
         top: 30%;
         text-transform: uppercase;
-        font-size: 350px;
+        font-size: 190px;
         color: white;
         opacity: 0;
         transition: 5s;
@@ -206,6 +206,8 @@
 
         /* */
 
+        const winner_theme = document.getElementById("room")
+
         /* Hours/day and winner background with span */
 
         const day = document.querySelector("h1")
@@ -260,12 +262,16 @@
                 blur_screen.style.zIndex = 1
 
 
-                container_buttons.style.zIndex = -1
-                button1.style.opacity = -1
-                button2.style.opacity = -1
+                container_buttons.style.opacity = 0
+                button1.style.opacity = 0
+                button2.style.opacity = 0
 
                 day.style.opacity = 0
                 hours.style.opacity = 0
+
+                winner_theme.style.backgroundImage = "url(/textures/black_screen.png)"
+                winner_theme.style.maxWidth = "100%"
+
             }
         }
         
