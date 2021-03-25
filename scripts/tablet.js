@@ -283,7 +283,11 @@ let counter_passing_three = () => {
 
     mask.style.bottom = "-10000px"
 
+    room.style.backgroundImage = "url(/textures/black_screen)"
+
     if(jumpscare.style.bottom = "0px") {
+
+    setInterval(ending_game, 100)
 
     const ending_game = () => { location.href = "you_are_loser.html" }
 
