@@ -53,7 +53,9 @@ btn_check.addEventListener("click", () => {
 
     room.style.backgroundImage = "url(/textures/black_screen.png)"
 
-    tablet.style.transition = "0.25s"
+    room.style.transition = "0.25s"
+
+    tablet.style.transition = "0.5s"
 
     cam_screen1_.style.opacity = 0.8
 

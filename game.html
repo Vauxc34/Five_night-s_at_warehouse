@@ -26,8 +26,6 @@
         width: 120%;
         background-image: url(/textures/room.png);
         background-size: 100% 100%;
-        transition: 0.5s;
-        z-index: 10;
     }
 
     #container {
@@ -206,7 +204,10 @@
 
         /* */
 
+        /* all the object that must hide */
+
         const winner_theme = document.getElementById("room")
+        const hidden_tablet = document.getElementById("tablet")
 
         /* Hours/day and winner background with span */
 
@@ -256,15 +257,17 @@
                 day.textContent = "Day 1"
             }if(day.textContent == "Day 1") {
 
+                hidden_tablet.style.opacity = 0
+
                 win_text.style.opacity = 1
-
-                blur_screen.style.opacity = 1
-                blur_screen.style.zIndex = 10
-
 
                 container_buttons.style.opacity = 0
                 button1.style.opacity = 0
                 button2.style.opacity = 0
+
+                container_buttons.style.zIndex = -3
+                button1.style.zIndex = -3
+                button2.style.zIndex = -3
 
                 day.style.opacity = 0
                 hours.style.opacity = 0
