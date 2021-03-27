@@ -254,41 +254,29 @@ let counter_passing_three = () => {
     c3.textContent = counter_actual_value_3++
 
     if (counter_actual_value_3 == 10) {
-        
-    jumpscare.style.bottom = "0px"
+    
+    let jmpstyle = 0
+
+    jumpscare.style.bottom = jmpstyle + "px"
 
     mask.style.bottom = "-10000px"
 
-    room.style.backgroundImage = "url(/textures/black_screen)"
+    if(jmpstyle == 0) {
 
-    if(jumpscare.style.bottom = "0px") {
-
-    setInterval(ending_game, 100)
-
-    const ending_game = () => { location.href = "you_are_loser.html" }
+    setInterval(jumpscare_on, 1000)
 
     }
-
-    clearInterval(counter_actual_value_3)
-
-    } else {
-
-        clearInterval(counter_actual_value_3)
 
     }
 
 }
 
 
-/* let counter_passing_four = () => {
+let jumpscare_on = () => {
 
-    c4.textContent = counter_actual_value_4 + Math.floor(Math.random() * 5)
+    location.href = "you_are_loser.html"
 
-    if(c4.textContent == 2) {
-        c4.textContent = "he goes"
-    }
-
-} */
+} 
 
 const change_room1 = () => {
     
@@ -386,8 +374,6 @@ setInterval(counter_passing_four, 1000) */
         }
 
         if(mask.style.bottom = "-10000px") {
-
-            room.style.backgroundImage = "url(/textures/room.png)"
 
             c3.textContent = counter_actual_value_3--
 
