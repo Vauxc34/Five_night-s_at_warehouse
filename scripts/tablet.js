@@ -109,7 +109,7 @@ btn_check.addEventListener("click", () => {
 
 let counter_passing_one = () => {
 
-    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 20)
+    c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 10)
 
     if(c1.textContent == 0) {
 
@@ -134,9 +134,9 @@ let counter_passing_one = () => {
 
         //
 
-        /* cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
-        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)" */
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
         c1.textContent = 4
 
@@ -150,8 +150,9 @@ let counter_passing_one = () => {
 
         //
 
-        
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
     }
 
@@ -163,9 +164,9 @@ let counter_passing_one = () => {
 
         //
 
-        /* cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
-        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)" */
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)" 
 
         c1.textContent = 8
 
@@ -392,7 +393,7 @@ setInterval(counter_passing_four, 1000) */
 
         } if(counter_actual_value_3 == 0) {
 
-        c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 20)
+        c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 10)
         c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 10)
 
         }
