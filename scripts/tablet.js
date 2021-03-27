@@ -388,9 +388,6 @@ setInterval(counter_passing_four, 1000) */
 
             room.style.backgroundImage = "url(/textures/room.png)"
 
-            // clearInterval(counter_actual_value_1)
-            // clearInterval(counter_actual_value_2)
-
             c3.textContent = counter_actual_value_3--
 
         } if(counter_actual_value_3 == 0) {
