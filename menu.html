@@ -5,17 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            position: relative;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .glitch {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(/textures/glitch_effect.gif);
+            background-size: 50%;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+    </style>
 </head>
 <body>
     
     <div id="container">
 
+        <div class="glitch"></div>
+
         <span id="title">Five night's at Doge</span>
 
-        <button>play</button>
-        <button>exit</button>
+        <button id="play_btn">play</button>
+        <button id="exit_btn">exit</button>
 
     </div>
     
 </body>
+<script>
+
+    const btn_play = document.getElementById("play_btn")
+    const btn_exit = document.getElementById("exit_btn")
+
+    btn_play.addEventListener("click", () => {
+
+        location.href = "game.html"
+
+    })
+
+</script>
 </html>

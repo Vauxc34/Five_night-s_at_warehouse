@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="styles_for_mask/mask.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Syne+Mono&display=swap" rel="stylesheet">
 </head>
 <style>
 
@@ -73,6 +77,8 @@
         position: fixed;
         top: 0px;
         left: 120px;
+        font-family: 'Source Code Pro', monospace;
+        font-family: 'Syne Mono', monospace;
         font-size: 90px;
         color: white;
     }
@@ -80,6 +86,8 @@
     h2 {
         position: fixed;
         right: 120px;
+        font-family: 'Source Code Pro', monospace;
+        font-family: 'Syne Mono', monospace;
         font-size: 90px;
         color: white;
     }
@@ -157,7 +165,8 @@
         background-image: url(/textures/jumpscare.png);
         background-repeat: no-repeat;
         background-size: 90% 100%;
-        transition: 0.5s
+        transition: 0.5s;
+        z-index: 10;
     }
 
 
@@ -169,19 +178,23 @@
         <div id="tablet">
             <div id="screen">
 
+                <div id="white-stripe"></div>
+
+                <div id="rec_rectangle"></div>
+
+                <span id="instruction">press escape button to exit monitoring mode</span>
+
                 <div id="cam_screen1">
-                <span id="instruction">main hall</span>
                     
-                <!--<span id="counter4">C_4</span>--> 
                 </div>
                 <div id="cam_screen2">
-                    <span id="instruction">conference Room</span>
+                    
                 </div>
                 <div id="cam_screen3">
-                    <span id="instruction">warehouse</span>
+                    
                 </div>
                 <div id="cam_screen4">
-                    <span id="instruction">boiler</span>
+                    
                 </div>
 
                 <span id="minimap">
@@ -217,6 +230,7 @@
         <span id="counter1">C_1</span>
         <span id="counter2">C_2</span>
         <span id="counter3">5</span>
+        <!--<span id="counter4">C_4</span>--> 
 
         <!---->
 

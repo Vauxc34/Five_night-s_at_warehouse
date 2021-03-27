@@ -17,7 +17,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
   height: 100%;
@@ -27,11 +27,38 @@
   opacity: 1;
 }
 
+#tablet #screen #white-stripe {
+  position: absolute;
+  margin: 2.5%;
+  height: 90vh;
+  width: 95vw;
+  border: 5px solid #fff;
+  border-radius: 0px;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+#tablet #screen #rec_rectangle {
+  position: absolute;
+  top: 6.5%;
+  right: 4.5%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: red;
+  -webkit-animation: recording 2s infinite;
+          animation: recording 2s infinite;
+  z-index: 1;
+  opacity: 0.75;
+}
+
 #tablet #screen #instruction {
-  margin: 1.5%;
+  margin: 3.5%;
+  font-family: 'Source Code Pro', monospace;
   font-size: 50px;
   color: white;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 #tablet #screen #minimap {
@@ -43,6 +70,7 @@
   background-image: url(/textures/mini_map_cam1.png);
   opacity: 0.75;
   background-size: 100%;
+  z-index: 2;
 }
 
 #tablet #screen #minimap #cam1_tile {
@@ -185,5 +213,41 @@
   background-image: url(/textures/room_without_animatronic/cam4_rom.png);
   background-size: 100% 100%;
   opacity: 0;
+}
+
+@-webkit-keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes recording {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=tablet.css.map */

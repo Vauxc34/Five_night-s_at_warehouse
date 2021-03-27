@@ -260,7 +260,7 @@ let counter_passing_three = () => {
 
     c3.textContent = counter_actual_value_3++
 
-    if (counter_actual_value_3 == 5) {
+    if (counter_actual_value_3 == 10) {
         
     jumpscare.style.bottom = "0px"
 
@@ -398,7 +398,8 @@ setInterval(counter_passing_four, 1000) */
 
             clearInterval(counter_actual_value_1)
             clearInterval(counter_actual_value_2)
-            clearInterval(counter_actual_value_3)
+
+            c3.textContent = counter_actual_value_3--
 
         }
 
