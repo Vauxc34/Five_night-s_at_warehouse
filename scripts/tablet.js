@@ -152,10 +152,6 @@ let counter_passing_one = () => {
 
         
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
-        
-
-        console.log("he was here")
-
 
     }
 
@@ -214,8 +210,6 @@ let counter_passing_one = () => {
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
         cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
 
-        console.log("left")
-
         setInterval(counter_passing_three, 1000)
 
         /* jumpscare */
@@ -243,8 +237,6 @@ let counter_passing_one = () => {
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
         cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
-
-        console.log("right")
 
         setInterval(counter_passing_three, 1000)
 
@@ -396,10 +388,15 @@ setInterval(counter_passing_four, 1000) */
 
             room.style.backgroundImage = "url(/textures/room.png)"
 
-            clearInterval(counter_actual_value_1)
-            clearInterval(counter_actual_value_2)
+            // clearInterval(counter_actual_value_1)
+            // clearInterval(counter_actual_value_2)
 
             c3.textContent = counter_actual_value_3--
+
+        } if(counter_actual_value_3 == 0) {
+
+        c1.textContent = counter_actual_value_1 + Math.floor(Math.random() * 20)
+        c2.textContent = counter_actual_value_2 + Math.floor(Math.random() * 10)
 
         }
 
