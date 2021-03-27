@@ -7,6 +7,8 @@
     <title>Night 1</title>
     <link rel="stylesheet" href="styles_for_tablet/tablet.css">
     <link rel="stylesheet" href="styles_for_mask/mask.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
 
@@ -21,7 +23,6 @@
     }
 
     #room {
-        position: relative;
         height: 100vh;
         width: 120%;
         background-image: url(/textures/room.png);
@@ -30,7 +31,7 @@
     }
 
     #container {
-        position: fixed;
+        position: relative;
         display: flex;
         justify-content: center;
         height: 100vh;
@@ -44,7 +45,7 @@
         height: 100%;
         width: 100px;
         background-color: #00000075;
-        left: 95%;
+        right: 0%;
         z-index: 1;
     }
 
@@ -59,14 +60,13 @@
     }
 
     #btn_container {
-        position: fixed;
-        bottom: 0px;
-        height: 20vh;
-        width: 100vh;
-        border-top-left-radius:50px;
-        border-top-right-radius:50px;
-        background-color: #e07f0080;
-        z-index: -2;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
     }
 
     h1 {
@@ -75,7 +75,6 @@
         left: 120px;
         font-size: 90px;
         color: white;
-        z-index: -1;
     }
 
     h2 {
@@ -83,7 +82,6 @@
         right: 120px;
         font-size: 90px;
         color: white;
-        z-index: -1;
     }
 
     #winner {
@@ -98,15 +96,24 @@
     }
 
     #check {
+        position: fixed;
         align-self: flex-end;
+        bottom: 2.5%;
+        right: 28%;
         height: 10%;
         width: 20%;
         border-radius: 50px;
         border: none;
         text-transform: uppercase;
-        margin: 40px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 50px;
+        font-weight: 500;
         transition: 0.15s;
+        background-color: #858585e5;
+        border: 10px ridge #1d1d1dbb;
+        border-radius: 20px;
         cursor: pointer;
+        z-index: 2;
     }
 
     #check:active {
@@ -116,15 +123,24 @@
     }
 
     #door {
+        position: fixed;
         align-self: flex-end;
+        bottom: 2.5%;
+        left: 28%;
         height: 10%;
         width: 20%;
         border-radius: 50px;
         border: none;
         text-transform: uppercase;
-        margin: 40px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 50px;
+        font-weight: 500;
         transition: 0.15s;
+        background-color: #858585e5;
+        border: 10px ridge #1d1d1dbb;
+        border-radius: 20px;
         cursor: pointer;
+        z-index: 2;
     }
 
     #door:active {
@@ -154,20 +170,18 @@
             <div id="screen">
 
                 <div id="cam_screen1">
-                    <span id="instruction">press escape button to exit from monitoring mode</span>
-                    <span id="counter1">C_1</span>
-                    <span id="counter2">C_2</span>
-                    <span id="counter3">5</span>
+                <span id="instruction">main hall</span>
+                    
                 <!--<span id="counter4">C_4</span>--> 
                 </div>
                 <div id="cam_screen2">
-                    <span id="instruction">press escape button to exit from monitoring mode</span>
+                    <span id="instruction">conference Room</span>
                 </div>
                 <div id="cam_screen3">
-                    <span id="instruction">press escape button to exit from monitoring mode</span>
+                    <span id="instruction">warehouse</span>
                 </div>
                 <div id="cam_screen4">
-                    <span id="instruction">press escape button to exit from monitoring mode</span>
+                    <span id="instruction">boiler</span>
                 </div>
 
                 <span id="minimap">
@@ -184,14 +198,28 @@
         </div>
         <h1>Night 1</h1>
         <h2>00:00</h2>
-        <button id="door">mask on</button><button id="check">check</button>
         <div id="btn_container">
             <div id="scroll-right"></div>
             <div id="scroll-left"></div>
+            <button id="check">check</button>
+            <button id="door">mask on</button>
         </div>
-        </div>
+
+        <!--Mask & Jumpscare-->
+
         <div id="mask"></div>
         <div id="jumpscare"></div>
+
+        <!---->
+
+        <!-- animatronic move -->
+
+        <span id="counter1">C_1</span>
+        <span id="counter2">C_2</span>
+        <span id="counter3">5</span>
+
+        <!---->
+
     </div>
     <script>
 

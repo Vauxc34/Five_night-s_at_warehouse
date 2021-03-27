@@ -6,6 +6,7 @@
     left: 0px
     height: 100%
     width: 100%
+    z-index: 1
     #screen
         display: flex
         position: fixed
@@ -15,9 +16,9 @@
         background-image: url(/textures/glitch_effect.gif)
         background-size: 40%
         opacity: 1
-        z-index: -1
         #instruction
-            font-size: 30px
+            margin: 1.5%
+            font-size: 50px
             color: white
             text-transform: uppercase
         #minimap
@@ -37,7 +38,6 @@
                 width: 45px
                 background-color: transparent
                 cursor: pointer
-                z-index: 1
             #cam2_tile
                 position: absolute
                 bottom: 73.35%
@@ -46,7 +46,6 @@
                 width: 115px
                 background-color: transparent
                 cursor: pointer
-                z-index: 1
             #cam3_tile
                 position: absolute
                 bottom: 27.75%
@@ -55,7 +54,6 @@
                 width: 100px
                 background-color: transparent
                 cursor: pointer
-                z-index: 1
             #cam4_tile
                 position: absolute
                 bottom: 57.85%
@@ -64,7 +62,6 @@
                 width: 100px
                 background-color: transparent
                 cursor: pointer
-                z-index: 1
 
         #counter1
             align-self: flex-end
@@ -77,10 +74,12 @@
             font-size: 30px
             color: white
             margin: 80px
+            opacity: 0
         #counter3
             align-self: flex-start
             font-size: 30px
             margin: 80px
+            opacity: 0
         #counter4
             align-self: flex-start
             font-size: 30px
@@ -89,6 +88,8 @@
 
 
 #cam_screen1
+    display: flex
+    justify-content: flex-start
     position: absolute
     align-self: center
     height: 100%
@@ -98,6 +99,8 @@
     opacity: 0
     
 #cam_screen2
+    display: flex
+    justify-content: flex-start
     position: absolute
     align-self: center
     height: 100%
@@ -107,6 +110,8 @@
     opacity: 0
     
 #cam_screen3
+    display: flex
+    justify-content: flex-start
     position: absolute
     align-self: center
     height: 100%
@@ -116,6 +121,8 @@
     opacity: 0
     
 #cam_screen4
+    display: flex
+    justify-content: flex-start
     position: absolute
     align-self: center
     height: 100%

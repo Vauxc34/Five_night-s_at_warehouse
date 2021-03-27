@@ -47,17 +47,14 @@ btn_check.addEventListener("click", () => {
     btn_check.style.opacity = 0
     btn_mask_.style.opacity = 0
 
-    minutes_1.style.zIndex = -2
-    hours_1.style.zIndex = -2
-
     hours_1.style.opacity = 0
     minutes_1.style.opacity = 0
 
-    room.style.backgroundImage = "url(/textures/black_screen.png)"
+    // room.style.backgroundImage = "url(/textures/black_screen.png)"
 
-    room.style.transition = "0.25s"
+    // room.style.transition = "0.25s"
 
-    tablet.style.transition = "0.5s"
+    // tablet.style.transition = "0.5s"
 
     cam_screen1_.style.opacity = 0.8
 
@@ -100,7 +97,7 @@ btn_check.addEventListener("click", () => {
             hours_1.style.opacity = 1
             minutes_1.style.opacity = 1
 
-            tablet.style.transition = "0.25s"
+            // tablet.style.transition = "0.25s"
 
         }
     
@@ -133,19 +130,15 @@ let counter_passing_one = () => {
 
         //Room without animatronic
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
         //
 
-        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        /* cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
         cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
-        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)" */
 
         c1.textContent = 4
-
-    } else {
-
-        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
@@ -157,16 +150,12 @@ let counter_passing_one = () => {
 
         //
 
-        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
+        
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
-        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        
 
         console.log("he was here")
 
-
-    } else {
-
-        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
@@ -178,15 +167,11 @@ let counter_passing_one = () => {
 
         //
 
-        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        /* cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
         cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
-        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)"
+        cam_screen4_.style.backgroundImage = "url(/textures/room_without_animatronic/cam4_rom.png)" */
 
         c1.textContent = 8
-
-    } else {
-
-        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
 
     }
 
@@ -198,15 +183,13 @@ let counter_passing_one = () => {
 
         //
 
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
+        cam_screen3_.style.backgroundImage = "url(/textures/room_with_animatronic/cam3_rom.png)"
+        cam_screen2_.style.backgroundImage = "url(/textures/room_without_animatronic/cam2_rom.png)"
+        cam_screen1_.style.backgroundImage = "url(/textures/room_without_animatronic/cam1_rom.png)"
 
         //
 
         setInterval(counter_passing_two, 10000)
-
-    } else {
-
-        cam_screen3_.style.backgroundImage = "url(/textures/room_without_animatronic/cam3_rom.png)"
 
     }
 

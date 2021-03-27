@@ -9,5 +9,6 @@
   background-size: 100% 110%;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  z-index: 2;
 }
 /*# sourceMappingURL=mask.css.map */

@@ -10,6 +10,7 @@
   left: 0px;
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 
 #tablet #screen {
@@ -24,11 +25,11 @@
   background-image: url(/textures/glitch_effect.gif);
   background-size: 40%;
   opacity: 1;
-  z-index: -1;
 }
 
 #tablet #screen #instruction {
-  font-size: 30px;
+  margin: 1.5%;
+  font-size: 50px;
   color: white;
   text-transform: uppercase;
 }
@@ -52,7 +53,6 @@
   width: 45px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
 }
 
 #tablet #screen #minimap #cam2_tile {
@@ -63,7 +63,6 @@
   width: 115px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
 }
 
 #tablet #screen #minimap #cam3_tile {
@@ -74,7 +73,6 @@
   width: 100px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
 }
 
 #tablet #screen #minimap #cam4_tile {
@@ -85,7 +83,6 @@
   width: 100px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
 }
 
 #tablet #screen #counter1 {
@@ -103,6 +100,7 @@
   font-size: 30px;
   color: white;
   margin: 80px;
+  opacity: 0;
 }
 
 #tablet #screen #counter3 {
@@ -110,6 +108,7 @@
       align-self: flex-start;
   font-size: 30px;
   margin: 80px;
+  opacity: 0;
 }
 
 #tablet #screen #counter4 {
@@ -121,9 +120,14 @@
 }
 
 #cam_screen1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   height: 100%;
   width: 100%;
@@ -133,9 +137,14 @@
 }
 
 #cam_screen2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   height: 100%;
   width: 100%;
@@ -145,9 +154,14 @@
 }
 
 #cam_screen3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   height: 100%;
   width: 100%;
@@ -157,9 +171,14 @@
 }
 
 #cam_screen4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: absolute;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   height: 100%;
   width: 100%;
