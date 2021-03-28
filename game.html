@@ -305,9 +305,17 @@
                 actual_hour = 5
                 hours.textContent = actual_hour + ":" + actual_minutes
             }if(actual_minutes == 55 && actual_hour == 5) {
-                actual_hour = 6
+
+                actual_hour = 6                
+
             }if(actual_hour == 6) {
+
                 day.textContent = "Day 1"
+
+                const end_game = () => { location.href = "menu.html" }
+
+                setInterval(end_game, 100)
+
             }if(day.textContent == "Day 1") {
 
                 hidden_tablet.style.opacity = 0

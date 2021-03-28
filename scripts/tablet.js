@@ -85,7 +85,7 @@ btn_check.addEventListener("click", () => {
 
         if(event.keyCode === 27) {
             tablet.style.top = "-10000px"
-            room.style.backgroundImage = "url(textures/room.png)"
+            room.style.backgroundImage = "url(/textures/room.png)"
 
             btn_check.style.zIndex = 2
             btn_mask_.style.zIndex = 2
@@ -257,9 +257,13 @@ let counter_passing_three = () => {
     
     let jmpstyle = 0
 
+    let tablethid = -10000
+
     jumpscare.style.bottom = jmpstyle + "px"
 
     mask.style.bottom = "-10000px"
+
+    tablet.style.top = tablethid + "px"
 
     if(jmpstyle == 0) {
 

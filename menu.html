@@ -16,8 +16,17 @@
         #container {
             position: relative;
             display: flex;
+            justify-content: center;
             height: 100vh;
             width: 100vw;
+        }
+
+        .bgc {
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(/textures/menu.png);
+            z-index: -1;
         }
 
         .glitch {
@@ -26,9 +35,49 @@
             width: 100vw;
             background-image: url(/textures/glitch_effect.gif);
             background-size: 50%;
-            opacity: 0.5;
+            opacity: 0.45;
             z-index: -1;
         }
+
+        #title {
+            margin: 50px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 100px;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        button {
+            position: absolute;
+            align-self: center;
+            height: 120px;
+            width: 480px;
+            border-radius: 50px;
+            font-size: 80px;
+            text-transform: uppercase;
+            background-color: #111111a9;
+            cursor: pointer;
+        }
+
+        #play_btn {
+            left: 20%;
+        }
+
+        #exit_btn {
+            right: 20%;
+        }
+
+        #credits {
+            position: absolute;
+            align-self: flex-end;
+            text-transform: uppercase;
+            margin: 50px;
+            font-size: 80px;
+            color: white;
+            font-family:'Syne Mono', monospace;
+        }
+
+
 
     </style>
 </head>
@@ -36,12 +85,16 @@
     
     <div id="container">
 
+        <div class="bgc"></div>
+
         <div class="glitch"></div>
 
         <span id="title">Five night's at Doge</span>
 
         <button id="play_btn">play</button>
         <button id="exit_btn">exit</button>
+
+        <spann id="credits">wiktor wyrostek 2021 &copy</spann>
 
     </div>
     
@@ -56,6 +109,16 @@
         location.href = "game.html"
 
     })
+
+    btn_exit.addEventListener("click", () => {
+
+        var confirm_result = confirm("Are you sure you want to quit?");
+
+        if (confirm_result == true) {
+            window.close();
+        }
+            
+        })
 
 </script>
 </html>
