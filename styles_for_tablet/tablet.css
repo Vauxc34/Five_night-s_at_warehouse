@@ -114,32 +114,6 @@
   cursor: pointer;
 }
 
-#tablet #screen #counter1 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 30px;
-  color: white;
-  margin: 80px;
-  opacity: 0;
-}
-
-#tablet #screen #counter2 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  font-size: 30px;
-  color: white;
-  margin: 80px;
-  opacity: 0;
-}
-
-#tablet #screen #counter3 {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 30px;
-  margin: 80px;
-  opacity: 0;
-}
-
 #tablet #screen #counter4 {
   -ms-flex-item-align: start;
       align-self: flex-start;
